@@ -1,10 +1,22 @@
 # Import dependencies
+import sys
+import os
+import platform
+from watermark import watermark
+
 import streamlit as st
 from dataclasses import dataclass
 from typing import Any, List
 import datetime as datetime
 import pandas as pd
 import hashlib
+# import polars as pl
+
+# Report Technologies
+print(f'Python Platform: {platform.platform()}')
+print(f'Python {sys.version}')
+print(watermark())
+print(watermark(iversions=True, globals_=globals()))
 
 # Define the Record data class
 
@@ -71,7 +83,7 @@ class PyChain:
         """
         calculated_hash = block.hash_block()
 
-        num_of_zeros = "0" * self.difficulty
+        num_of_zeros = '0' * self.difficulty
 
         while not calculated_hash.startswith(num_of_zeros):
             block.nonce += 1
@@ -133,6 +145,7 @@ receiver_data = st.text_input('Receiver')
 
 # @TODO:
 # Add an input area where you can get a value for `amount` from the user.
+seed = 42
 amount_data = st.text_input('Amount')
 
 if st.button('Add Block'):
@@ -143,7 +156,7 @@ if st.button('Add Block'):
     # Create a new block with the relevant attributes
     new_block = Block(
         record=Record(sender_data, receiver_data, amount_data),
-        creator_id=42,
+        creator_id=seed,
         prev_hash=prev_block_hash
     )
 
@@ -157,6 +170,9 @@ if st.button('Add Block'):
 # Display the PyChain ledger
 
 st.markdown('## The PyChain Ledger')
+# pychain_df = pl.DataFrame(pychain.chain)
+# pychain_df.with_column(pl.col('nonce').apply(lambda x: str(x)))
+# pychain_df.with_column(pl.col('creator_id').apply(lambda x: str(x)))
 pychain_df = pd.DataFrame(pychain.chain).astype(str)
 st.write(pychain_df)
 
@@ -173,4 +189,7 @@ st.sidebar.write(selected_block)
 
 # Validate the PyChain
 if st.button('Validate Chain'):
-    st.write(pychain.is_valid())
+    if pychain.is_valid():
+        st.success('This is a valid chain!', icon="✅")
+    else:
+        st.warning('This is NOT a valid chain!', icon="⚠️")
