@@ -141,6 +141,9 @@ ___
 
 [Open AI](https://openai.com/blog/chatgpt/)
 
+[st.success](https://docs.streamlit.io/library/api-reference/status/st.success)
+
+[st.warning](https://docs.streamlit.io/library/api-reference/status/st.warning)
 
 ___
 ## **License**
