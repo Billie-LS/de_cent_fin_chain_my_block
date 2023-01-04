@@ -14,6 +14,10 @@ Product -
 >* Change the existing Block data class by replacing the generic data attribute with a record attribute that’s of type Record. 
 >* Create additional user input areas in the Streamlit application. These input areas should collect the relevant information for each financial record that you’ll store in the PyChain ledger. 
 >* Create additional user input areas in the Streamlit application. These input areas should collect the relevant information for each financial record that you’ll store in the PyChain ledger.
+
+![app](images/app.png)
+![app](images/multipleblocks.png)
+![app](images/validchain.png)
 ___
 
 ## **Technologies**
