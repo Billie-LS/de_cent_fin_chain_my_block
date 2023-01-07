@@ -38,7 +38,6 @@ print(watermark())
 print(watermark(iversions=True, globals_=globals()))
 ################################################################################
 # Step 1:
-# @TODO
 # Create a Record Data Class that consists of the `sender`, `receiver`, and
 # `amount` attributes
 
@@ -56,7 +55,6 @@ class Record:
 @dataclass
 class Block:
 
-    # @TODO
     # The `record` attribute consists of a `Record` object
     record: Record
     creator_id: int
@@ -167,15 +165,12 @@ pychain = setup()
 # Add relevant user inputs to the Streamlit interface
 # Get the input data
 
-# @TODO:
 # Add an input area where you can get a value for `sender` from the user.
 sender_data = st.text_input('Sender')
 
-# @TODO:
 # Add an input area where you can get a value for `receiver` from the user.
 receiver_data = st.text_input('Receiver')
 
-# @TODO:
 # Add an input area where you can get a value for `amount` from the user.
 amount_data = st.text_input('Amount')
 
@@ -185,7 +180,6 @@ if st.button('Add Block'):
     prev_block = pychain.chain[-1]
     prev_block_hash = prev_block.hash_block()
 
-    # @TODO
     # Create a new block with the relevant attributes
     new_block = Block(
         record=Record(sender_data, receiver_data, amount_data),
