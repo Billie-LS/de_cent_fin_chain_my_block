@@ -1,9 +1,5 @@
 # PyChain Ledger
 ################################################################################
-# You’ll make the following updates to the provided Python file for this
-# Challenge, which already contains the basic `PyChain` ledger structure that
-# you created throughout the module:
-
 # Step 1: Create a Record Data Class
 # * Create a new data class named `Record`. This class will serve as the
 # blueprint for the financial transaction records that the blocks of the ledger
@@ -42,7 +38,6 @@ print(watermark())
 print(watermark(iversions=True, globals_=globals()))
 ################################################################################
 # Step 1:
-# Define the Record data class
 # @TODO
 # Create a Record Data Class that consists of the `sender`, `receiver`, and
 # `amount` attributes
@@ -62,7 +57,6 @@ class Record:
 class Block:
 
     # @TODO
-    # Rename the `data` attribute to `record`, and set the data type to `Record`
     # The `record` attribute consists of a `Record` object
     record: Record
     creator_id: int
@@ -172,8 +166,6 @@ pychain = setup()
 # Step 3:
 # Add relevant user inputs to the Streamlit interface
 # Get the input data
-# @TODO:
-# Delete the `input_data` variable from the Streamlit interface.
 
 # @TODO:
 # Add an input area where you can get a value for `sender` from the user.
