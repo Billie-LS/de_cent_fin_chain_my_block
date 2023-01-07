@@ -89,16 +89,10 @@ git clone git@github.com:Billie-LS/de_cent_fin_chain_my_block.git
 ---
 ## **Usage**
 
-From terminal, the installed application is run, it is recommended you open the application with VSCode IDE and run to obtain proper terminal run script:
+In the terminal, navigate to the project folder where you've installed the application; run the streamlit application by using `streamlit run pychain.py`:
 
 ```python
-> code .
-
-```
-The file you will run is:
-
-```python
-pychain.py
+> streamlit run pychain.py 
 
 ```
 ___
