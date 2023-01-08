@@ -201,7 +201,7 @@ pychain_df = pd.DataFrame(pychain.chain).astype(str)
 st.write(pychain_df)
 
 # Allow the user to adjust the difficulty of the proof of work
-difficulty = st.sidebar.slider('Block Difficulty', 1, 5, 2)
+difficulty = st.sidebar.slider('Block Difficulty', 1, 7, 2)
 pychain.difficulty = difficulty
 
 # Allow the user to inspect individual blocks
