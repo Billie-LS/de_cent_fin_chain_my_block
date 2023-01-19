@@ -133,11 +133,13 @@ ___
 
 ### **Additional references and or resources utilized**
 
-[Open AI](https://openai.com/blog/chatgpt/)
+[Type hints](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html)
 
 [st.success](https://docs.streamlit.io/library/api-reference/status/st.success)
 
 [st.warning](https://docs.streamlit.io/library/api-reference/status/st.warning)
+
+[Open AI](https://openai.com/blog/chatgpt/)
 
 ___
 ## **License**
